@@ -22,8 +22,8 @@ router.post("/create-checkout-session", async (req, res) => {
 		payment_method_types: ["card"],
 		line_items: lineItems,
 		mode: "payment",
-		success_url: "http://localhost:5173/order-conformation",
-		cancel_url: "http://localhost:5173/checkout"
+		success_url: "https://rabbit-ecommerce-tyvb.vercel.app/order-conformation",
+		cancel_url: "https://rabbit-ecommerce-tyvb.vercel.app/checkout"
 	});
 
 	res.json({id: session.id});
